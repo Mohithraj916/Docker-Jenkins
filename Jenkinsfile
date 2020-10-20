@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('Set Up Environment') {
             steps {
+              sh 'export PATH=$PATH:/usr/local/bin'
                sh 'npm install'
                 
             }
