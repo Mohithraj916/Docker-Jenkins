@@ -9,14 +9,14 @@ pipeline {
     stages {
         stage('Set Up Environment') {
             steps {
-               sh 'node --version'
+               sh 'npm install'
                 
             }
         }
          stage('Build & Run') {
             steps {
-              sh 'npm --version'
-              //  sh 'node app.js'
+            
+              sh 'node app.js'
                 
             }
         }
