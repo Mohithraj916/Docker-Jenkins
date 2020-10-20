@@ -10,7 +10,7 @@ pipeline {
                     sh 'npm config ls'
               sh 'pwd'
                sh 'npm install'
-                
+              }
             }
         }
          stage('Build & Run') {
