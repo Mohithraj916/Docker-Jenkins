@@ -1,6 +1,5 @@
-FROM node
+FROM node:14-alpine
 
-RUN npm cache clean --force
-
+RUN pwd
 
 EXPOSE 3000

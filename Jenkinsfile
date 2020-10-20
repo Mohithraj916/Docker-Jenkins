@@ -6,8 +6,6 @@ pipeline {
     stages {
         stage('Set Up Environment') {
             steps {
-              nodejs(nodeJSInstallationName: 'Node 14.x') {
-                    sh 'npm config ls'
               sh 'pwd'
                sh 'npm install'
               }
