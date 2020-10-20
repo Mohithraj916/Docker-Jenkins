@@ -8,7 +8,7 @@ pipeline {
             steps {
               sh 'pwd'
                sh 'npm install'
-              }
+              
             }
         }
          stage('Build & Run') {
