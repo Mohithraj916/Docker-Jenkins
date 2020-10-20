@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Set Up Environment') {
             steps {
-                sh 'cd app'
+                sh 'pwd'
                 sh 'ls -l'
-               // sh '/app/npm install'
+                sh 'npm /app/install'
                 
             }
         }
