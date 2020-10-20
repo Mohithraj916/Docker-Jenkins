@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls -l'
-                sh 'npm /app/install'
+                sh 'npm --prefix ./app install ./app'
                 
             }
         }
