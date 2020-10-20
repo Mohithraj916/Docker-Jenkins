@@ -5,13 +5,13 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls -l'
-                sh 'npm --prefix ./app install ./app'
+                sh 'npm install /app/package.json'
                 
             }
         }
          stage('Build & Run') {
             steps {
-                sh 'node app.js'
+                sh 'node /app/app.js'
                 
             }
         }
