@@ -4,6 +4,8 @@ pipeline {
         stage('Set Up Environment') {
             steps {
                 sh 'pwd'
+                sh 'node --version'
+                sh 'npm --version'
                 sh 'ls -l'
                 sh 'npm install'
                 
