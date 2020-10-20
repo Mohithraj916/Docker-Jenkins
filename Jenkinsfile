@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Set Up Environment') {
             steps {
-               sh 'sudo node --version'
+               sh 'node --version'
                 
             }
         }
          stage('Build & Run') {
             steps {
-              sh 'sudo npm --version'
+              sh 'npm --version'
               //  sh 'node app.js'
                 
             }
