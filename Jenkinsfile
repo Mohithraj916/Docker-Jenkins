@@ -1,10 +1,15 @@
 pipeline {
-    agent { dockerfile true }
+    agent any
     stages {
-        stage('Test') {
+        stage('Set Up Environment') {
             steps {
-                sh 'git clone https://github.com/Mohithraj916/node_blog.git'
-                sh 'node node_blog/app.js'
+                sh 'npm install'
+                
+            }
+        }
+         stage('Build & Run') {
+            steps {
+                sh 'node app/app.js'
                 
             }
         }
