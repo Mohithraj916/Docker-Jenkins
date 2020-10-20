@@ -1,10 +1,14 @@
 pipeline {
-    agent {
-        dockerfile true
-    }
+    agent any
     
     stages {
-      
+      stage('Set Up Enviornment') {
+            steps {
+            
+              sh 'node --version'
+                
+            }
+        }
          stage('Build & Run') {
             steps {
             
