@@ -3,15 +3,15 @@ pipeline {
     stages {
         stage('Set Up Environment') {
             steps {
-                sh 'pwd'
+                sh 'cd app'
                 sh 'ls -l'
-                sh '/app/npm install'
+               // sh '/app/npm install'
                 
             }
         }
          stage('Build & Run') {
             steps {
-                sh 'node /app/app.js'
+                sh 'node app.js'
                 
             }
         }
