@@ -1,10 +1,15 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:14-alpine'
+            args '-p 3000:3000'
+        }
+    }
     
     stages {
         stage('Set Up Environment') {
             steps {
-              sh 'export PATH=$PATH:/usr/local/bin'
+              sh 'pwd'
                sh 'npm install'
                 
             }
