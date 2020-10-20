@@ -4,13 +4,14 @@ pipeline {
         stage('Set Up Environment') {
             steps {
                 sh 'pwd'
-                sh 'app/npm install'
+                sh 'ls -l'
+                sh '/app/npm install'
                 
             }
         }
          stage('Build & Run') {
             steps {
-                sh 'node app/app.js'
+                sh 'node /app/app.js'
                 
             }
         }
