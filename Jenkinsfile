@@ -1,19 +1,17 @@
 pipeline {
-    agent { dockerfile true }
+    agent any
+
     stages {
         stage('Set Up Environment') {
             steps {
-                sh 'pwd'
-                sh 'node --version'
-                sh 'npm --version'
-                sh 'ls -l'
-                sh 'npm install'
+               sh 'node --version'
                 
             }
         }
          stage('Build & Run') {
             steps {
-                sh 'node app.js'
+              sh 'npm --version'
+              //  sh 'node app.js'
                 
             }
         }
