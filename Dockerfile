@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node
 
 RUN npm cache clean --force
 RUN chown -R 498:496 "/.npm"
