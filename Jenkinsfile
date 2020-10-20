@@ -4,11 +4,7 @@ pipeline {
     }
     
     stages {
-        stage('Set Up Environment') {
-            steps {
-              
-            }
-        }
+      
          stage('Build & Run') {
             steps {
             
